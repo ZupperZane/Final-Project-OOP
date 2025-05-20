@@ -6,17 +6,32 @@ public class Animal {
     private int happiness;
 
     public int feed(){
-        if(hunger<100){
-            int Ch=hunger;
-            hunger = Ch+20;
+        int Ch=hunger;
+        hunger = Ch+20;
+        if(hunger>100){
+        hunger =100;
         }
         return hunger;
     }
 
-    public int play(){
-        if(happiness<100){
-            int Ch=happiness;
-            happiness= Ch+20;
+    public int getHunger(){
+        return hunger;
+    }
+    public void setHunger(int i){
+        this.hunger= i;
+    }
+
+    public int getHappiness(){
+        return happiness;
+    }
+    public void setHappiness(int i){
+        this.happiness=i;
+    }
+    public int petPlay(){
+        int Ch=happiness;
+        happiness= Ch+20;
+        if(happiness>100){
+            happiness=100;
         }
         return happiness;
     }
